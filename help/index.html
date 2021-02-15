@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- Ensures proper page width and zoom level on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../tableau-style/vendor/slick.js/slick/slick.css" media="all" />
+    <link rel="stylesheet" href="../tableau-style/css/style.min.css" media="all" />
+    <link rel="stylesheet" href="../tabusage-tracker.css" media="all" />
+    <link rel="shortcut icon" href="https://starschema.com/wp-content/uploads/2017/01/favicon.png"/>
+    <title>Help - Tableau Usage Tracker by Starschema - Tableau Desktop Extension for anonymized user behaviour tracking</title>
+
+    <style>
+      h3.pad-top { padding-top: 2em; }
+      .steps {}
+      .steps li img { padding: 10px; background: #ccc; max-width:100%;}
+      .steps li  { text-align:left; line-height: 1.8em; padding: 0.5em; border-bottom: 0.2em solid #eee; }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+        <a class="starschema-logo" target="_blank">by Starschema</a>
+        <a class="tableau-partner-logo" target="_blank">a Tableu Partner</a>
+    </div>
+
+    <div class="intro-text">
+
+      <h1>Tableau Tracker User Guide</h1>
+
+      <h3> Set up Tracking on your Dashboard</h3>
+      <ol class="steps">
+        <li>
+          <p>
+            Register your deployment to get your deployment ID. Registration and Deployment ID are necessary to start collect data.
+          </p>
+        </li>
+
+        <li>
+          <p>Make sure you save both the Deployment ID and the Admin key after registration, because you won’t be able to recover those later if they get lost. The Deployment ID is necessary to identify your Tableau users when storing the data and the Admin key acts as a secret key (password) when you try to access the behavior data.</p>
+          Download the credentials <code>.txt</code> file after succesfully registering a Deployment.
+          </p>
+          <img src="fig2.png"/>
+        </li>
+        <li>
+          <p>Download the extension with clicking on the download trex file button</p>
+        </li>
+        <li>
+          <p>
+            Add the extension to your dashboard. The extension should notify you that you have to configure it for usage.
+          </p>
+          <img src="fig3.png"/>
+        </li>
+        <li>
+          <p>
+            Click on the Down Arrow on the extension border to bring up the context menu of the extension and click on "Configure".
+          </p>
+          <img src="fig4.png"/>
+        </li>
+        <li>
+          <p>Paste your deployment ID in the config screen and set a name for the workbook (it will appear in the reports under this name).</p>
+          <p>Optional: You can add extra settings as key-value pairs which can be retrieved in the WDC by the keys. This can come handy when you want to add some extra information to the events.</p>
+          <p>Then click "Save settings".</p>
+        </li>
+        <li>If the extension is running your dashboard is collecting data.</li>
+        <li>Optional: Set the extension to "Floating" from the context menu and resize it to 1px.</li>
+      </ol>
+
+
+      <h3 class="pad-top">Analyze Usage Data</h3>
+      <ol class="steps">
+        <li>You can start analyzing the collected data, by connecting to the data store. To do that, you have to create a new Web Data Connection in Tableau (Data/Web Data Connection).</li>
+        <li>Connect to <a id="tableau-tracker-wdc-page" target="_blank"></a></li>
+        <li>Copy and Paste your deployment ID and Admin Key.</li>
+        <li>Add Workbook Name, if you want to filter data for a specific workbook.</li>
+        <li>Add Custom settings key names in Custom Metadata Fields, separated by columns, if any defined in the extension settings.</li>
+        <li>Save Settings</li>
+        <li>
+          <p>Start analyzing user behavior in Tableau:</br></p>
+          <ul>
+            <li>A guide to the columns present in Tableau is defined <a href="column-definitions.html" target="_blank">here</a>.</li>
+            <li>To visualize your data in a dashboard, you can use our <a id="trust-example-workbook-from-help" href="#" target="_blank">example workbook</a>
+              by downloading it and editing the connection details of the data source in the example workbook to use your own settings (Complete steps 3-6.).</li>
+          </ul>
+        </li>
+      </ol>
+
+
+
+    </div>
+
+
+    <div class="footer">
+        <p class="main"> Tableau Usage Tracker &copy; 2019 <a target="_blank" id="starschema-link">Starschema</a></p>
+        <p class="misc"> Contact: <a id="starschema-contact-email"></a></p>
+        <p class="misc"> Tableau is a trademark of <a target="_blank" id="tableau-link">Tableau Inc</a></p>
+    </div>
+
+
+    <script src="../tableau-style/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../tableau-style/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../tableau-style/js/vendor.js"></script>
+    <script src="../tableau-style/js/scripts.min.js"></script>
+    <script src="../config.js"></script>
+    <script>$(function() { config.fillLinks(); });</script>
+  </body>
+</html>

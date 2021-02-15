@@ -1,0 +1,252 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- Ensures proper page width and zoom level on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="tableau-style/vendor/slick.js/slick/slick.css" media="all" />
+  <link rel="stylesheet" href="tableau-style/css/style.min.css" media="all" />
+  <link rel="stylesheet" href="tabusage-tracker.css" media="all" />
+  <link rel="shortcut icon" href="https://starschema.com/wp-content/uploads/2017/01/favicon.png"/>
+  <title>Tableau Usage Tracker by Starschema - Tableau Desktop Extension for anonymized user behaviour tracking</title>
+
+  <!--Track usage script-->
+  <script type="text/javascript">(function(o){var b="https://apeagle.io/anywhere/",t="238abb166e694035926105cb92fa93b5a52d71299b304ecba0dcd5b700738aed",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||"")+"&gdpr=1",j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};y=function(){z(b+t+'?'+p,true);};window.Autopilot.GDPRCookieOptIn=function(){z(b+t+'?'+p+'&optin=1',false);window.Autopilot.GDPROptedIn=true;};window.Autopilot.GDPRCookieOptOut=function(){z(b+t+'?'+p+'&optout=1',false);window.Autopilot.GDPROptedIn=false;};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
+</head>
+<body>
+<div class="header">
+  <a class="starschema-logo" target="_blank">by Starschema</a>
+  <a class="tableau-partner-logo" target="_blank">a Tableu Partner</a>
+</div>
+
+<div class="intro-picture">
+  <div class="tagline">
+    <h1>Tableau Usage Tracker</h1>
+    <h6>Understand user behavior in Tableau</h6>
+
+    <a class="cta cta--primary cta--arrow" id="ref-button" href="#register">Sign up for free</a>
+    <a class="cta cta--dark" id="ref-button" href="help/index.html">Help &amp; Documentation</a>
+  </div>
+</div>
+
+<div class="intro-text">
+  <h2> Have you ever wondered how people use the shiny Tableau dashboards and how they interact with it? </h2>
+  <p>
+    We all thrive to create the most engaging, user-friendly dashboards based on
+    feedback, but gathering detailed user behavior information at scale seemed to
+    be an impossible challenge until now. With the power of Tableau Extensions,
+    Starschema's Tableau Tracker enables you to easily measure and understand how
+    people consume and interact with dashboards. Tableau Tracker can anonymously
+    collect data like clicks and filter changes for every single user so you can
+    create better visualizations and optimize performance.
+  </p>
+  <p>
+    <a class="cta cta--primary" id="ref-button" href="#register">Sign up for free</a>
+  </p>
+
+
+  <h2 class="keep-apart">How Tableau Tracker Works</h2>
+
+  <div class="clearfix">
+    <div class="grid--5 padded-box nugget-left">
+      <h4>Anonymous data collection</h4>
+    </div>
+    <div class="grid--7 padded-box nugget-right">
+      Tableau Usage Tracker was built for the post-GDPR era, created with
+      privacy by design in mind. It does not collect personally identifiable
+      information from users like ID, name or email address.
+    </div>
+  </div>
+
+
+  <div class="clearfix">
+    <div class="grid--5 padded-box nugget-left">
+      <h4>Track every click in Tableau</h4>
+    </div>
+    <div class="grid--7 padded-box nugget-right">
+      Track and analyze filter changes, filter states, window size, workbook id,
+      session time and more right within Tableau.
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <div class="grid--5 padded-box nugget-left">
+      <h4>Pre-built Insights Dashboard</h4>
+    </div>
+    <div class="grid--7 padded-box nugget-right">
+      Understand behavior patterns instantly using the built-in dashboard
+      created by Starschema's team of Data Visualization Heros.
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <div class="grid--5 padded-box nugget-left">
+      <h4>Your Usage Data in your Tableau</h4>
+    </div>
+    <div class="grid--7 padded-box nugget-right">
+      Use our Web Data Connector to access your data
+      <code>
+        <a id="tableau-tracker-wdc-page" target="_blank"></a>
+      </code>
+      and download our <a  id="trust-example-workbook" href="#" target="_blank">example workbook</a>
+      to see a sample tracking dataset in action.
+    </div>
+  </div>
+
+
+  <p>
+    <a class="cta cta--primary" id="ref-button" href="#register">Sign up for free</a>
+  </p>
+
+  <h2 class="keep-apart">Benefits</h2>
+  <ul class="no-list">
+    <li>Create better/perfect dashboards based on real user behavior</li>
+    <li>Gather feedback from every user without bothering them with surveys or interviews</li>
+    <li>Optimize performance by decreasing server load with fewer filter changes</li>
+    <li>Decrease costs on server infrastructure by decreasing computing needs</li>
+  </ul>
+
+</div>
+
+
+<div>
+  <a name="register"></a>
+  <div class="form form--centered">
+    <div class="form__intro">
+      <h3 class="form__intro-heading">Sign up</h3>
+      <div class="form__intro-description help-text">
+        Register for a Tableau Extension to track the usage of your Tableau dashboards.
+      </div>
+    </div>
+
+    <form class="fields" onsubmit="return false">
+
+      <div class="status">
+        <div id="loader" style="display:none"> <img src="loader.gif" alt="loading" /> Loading...  </div>
+        <ul id="validation-messages" style="display:none">  </ul>
+      </div>
+
+      <div class="form__field form-field has-float-label">
+        <label class="form-field__label" for="first-name">First Name</label>
+        <input class="form__control form-field__control" type="text" name="first-name" placeholder="First Name" data-send="true">
+      </div>
+      <div class="form__field form-field has-float-label">
+        <label class="form-field__label" for="last-name">Last Name</label>
+        <input class="form__control form-field__control" type="text" name="last-name" placeholder="Last Name" data-send="true">
+      </div>
+      <div class="form__field form-field has-float-label">
+        <label class="form-field__label" for="email">Business E-mail</label>
+        <input class="form__control form-field__control" type="email" name="email" placeholder="E-mail address" data-send="true">
+      </div>
+      <div class="form__field form-field has-float-label">
+        <label class="form-field__label" for="organization">Organization</label>
+        <input class="form__control form-field__control" type="text" name="organization" placeholder="Organization" data-send="true">
+      </div>
+
+      <div class="form__field form-field has-float-label">
+        <label class="form-field__label" for="job-title">Job Title</label>
+        <input class="form__control form-field__control" type="text" name="job-title" placeholder="Job Title" data-send="true">
+      </div>
+
+      <div class="form-field form__field">
+        <div class="form-field form-field--checkbox">
+          <input type="checkbox" name="is-privacy-policy-accepted" id="is-privacy-policy-accepted-1" data-checkbox="true">
+          <label class="form-field__label" for="is-privacy-policy-accepted-1">
+            I agree to the <a id="starschema-privacy-policy-link" target="_blank">Privacy Policy</a>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-field form__field">
+        <div class="form-field form-field--checkbox">
+          <input type="checkbox" name="optInForUpdates" id="optInForUpdates-1" data-checkbox="true">
+          <label class="form-field__label" for="optInForUpdates-1">
+            I want to recieve occasional updates about the product.
+          </label>
+        </div>
+      </div>
+
+
+      <div class="form__actions">
+        <input id="submit-button" class="form__button cta cta--secondary" type="submit" value="Register">
+      </div>
+
+
+    </form>
+
+    <div id="results" style="display:none">
+      <div class="form__field form-field">
+        <label class="form-field__label" for="deploymentId">DeploymentId</label>
+        <input class="form__control form-field__control large-input" type="text" id="deployment-id-input" name="deploymentId" placeholder="Deployment Id">
+      </div>
+
+      <div class="form__field form-field">
+        <label class="form-field__label" for="adminKey">AdminKey</label>
+        <input class="form__control form-field__control large-input" type="text" id="admin-key-input" name="adminKey" placeholder="Admin Key">
+      </div>
+
+
+
+      <div class="form-field">
+        <div class="form-field__description form-help">Save these credentials by downloading them as a <code>.txt</code> file.</div>
+        <button id="download-txt" class="form__button cta cta--secondary">Download Credentials (.TXT)</button>
+      </div>
+
+
+
+    </div>
+
+
+
+  </div>
+</div>
+
+<div class="intro-text keep-apart">
+  <h3>On-premise deployment</h3>
+  <p>
+    For enterprise customers requiring complete control over collected
+    data, an on-premise version of <i style="white-space:nowrap">Tableau Tracker</i> is available.
+    Please contact <a id="starschema-sales-email"></a>
+    for more details and pricing.
+  </p>
+
+</div>
+
+
+
+<div class="intro-text keep-apart">
+  <h3>About Starschema</h3>
+  <p>
+    Starschema is a big data service provider and technology innovator
+    located in the United States and Hungary. Stuffed with the smartest
+    tech people, our team enjoys solving the most complex data related
+    challenges.
+  </p>
+
+  <p>
+    In the last 8 years, we’ve helped organizations of any size and
+    industry utilize their data assets using visual analytics in Tableau.
+    By constantly pushing and exceeding the limits of Tableau products to
+    satisfy our customers, our CEO Tamás Földi has been named Zen Master
+    for being the White-hat hacker of Tableau.
+  </p>
+</div>
+
+<div class="footer">
+  <p class="main"> Tableau Usage Tracker &copy; 2019 <a target="_blank" id="starschema-link">Starschema</a></p>
+  <p class="misc"> Contact: <a id="starschema-contact-email"></a></p>
+  <p class="misc"> Tableau is a trademark of <a target="_blank" id="tableau-link">Tableau Inc</a></p>
+</div>
+
+
+<script src="tableau-style/vendor/jquery/dist/jquery.min.js"></script>
+<script src="tableau-style/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="tableau-style/js/vendor.js"></script>
+<script src="tableau-style/js/scripts.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.5/bluebird.min.js"></script>
+<!-- Library to allow saving of TREX files generated on the fly -->
+<script src="js/FileSaver.min.js"></script>
+<script src="config.js"></script>
+<script src="registration.js"></script>
+<script>$(function() { config.fillLinks(); });</script>
+</body>
+</html>

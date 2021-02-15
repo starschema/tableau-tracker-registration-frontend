@@ -1,0 +1,43 @@
+
+input.large-input { width: 40em; }
+.privacy-policy { text-align:center; padding-top: 1.5em; font-size: 0.85em; }
+
+#validation-messages { margin: 1em auto; width: 30em; background: #fcc; color: red; border: 2px solid red; padding: 1em; }
+
+#loader { text-align:center; padding: 1em; color: #aaa; }
+
+.form-help { max-width: 432px; margin: 0 auto; text-align: center; }
+
+.intro-text,
+.header { max-width: 55em; margin: 0 auto; text-align:center; }
+
+.intro-text { margin: 3em auto 5em auto; padding-bottom: 4em; }
+.intro-picture { background: url(img/front-image.jpg) no-repeat bottom center #ccc; padding: 2em 0; }
+.intro-picture .tagline { max-width: 45em; margin: 0 auto; color: white; }
+.intro-picture .tagline h1,
+.intro-picture .tagline h6 { color: white; }
+
+.intro-picture .tagline h6 { font-weight: bold; }
+
+.header { height: 40px; padding: 20px; }
+.starschema-logo { background: url(img/starschema-logo.png) no-repeat left top; float:left; text-indent:-300em; height: 40px; width:200px; }
+.tableau-partner-logo { background: url(img/tableau-partner-logo.png) no-repeat right top; float:right; text-indent:-300em; height: 40px; width:200px; }
+
+
+.footer { background: #1b1b1b; color: #787878; text-align:center; padding: 3em 0;  line-height: 30px; font-family: "Benton Sans Book",Helvetica,sans-serif; font-size: 0.6875em; letter-spacing: 1px; text-transform: uppercase; overflow:hidden; margin-top: 100px; }
+.footer a { color: white; font-weight: bold; text-decoration:underline; }
+
+.footer .misc { font-size: 0.8em; }
+
+.help-text { color: #999; }
+#ref-button { margin-left: 0;}
+
+.keep-apart { margin-top: 50px; }
+.info-nugget { margin-top: 15px; }
+
+.nugget-left { text-align:right; }
+.nugget-right { text-align:left; }
+.nugget-center { text-align:center; }
+
+.no-list { list-style: none; }
+#help-link { text-align: center; max-width: 200px}

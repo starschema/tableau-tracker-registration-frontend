@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau Usage Tracker</title>
+    <link rel="stylesheet" href="tableau-style/css/style.min.css" media="all" />
+    <link rel="stylesheet" href="tabusage-tracker.css" media="all" />
+</head>
+<body>
+<div class="container">
+    <a name="register"></a>
+    <div class="form form--centered">
+        <div class="form__intro">
+            <h3 class="form__intro-heading">Sign up</h3>
+            <div class="form__intro-description help-text">
+                Register for a Tableau Extension to track the usage of your Tableau dashboards.
+            </div>
+        </div>
+
+        <div class="fields">
+
+            <div class="status">
+                <div id="loader" style="display:none"> <img src="loader.gif" alt="loading" /> Loading...  </div>
+                <ul id="validation-messages" style="display:none">  </ul>
+            </div>
+
+            <div class="form__field form-field has-float-label">
+                <label class="form-field__label" for="first-name">First Name</label>
+                <input class="form__control form-field__control" type="text" name="first-name" placeholder="First Name" data-send="true">
+            </div>
+            <div class="form__field form-field has-float-label">
+                <label class="form-field__label" for="last-name">Last Name</label>
+                <input class="form__control form-field__control" type="text" name="last-name" placeholder="Last Name" data-send="true">
+            </div>
+            <div class="form__field form-field has-float-label">
+                <label class="form-field__label" for="email">Business E-mail</label>
+                <input class="form__control form-field__control" type="email" name="email" placeholder="E-mail address" data-send="true">
+            </div>
+            <div class="form__field form-field has-float-label">
+                <label class="form-field__label" for="organization">Organization</label>
+                <input class="form__control form-field__control" type="text" name="organization" placeholder="Organization" data-send="true">
+            </div>
+
+            <div class="form__field form-field has-float-label">
+                <label class="form-field__label" for="job-title">Job Title</label>
+                <input class="form__control form-field__control" type="text" name="job-title" placeholder="Job Title" data-send="true">
+            </div>
+
+            <input hidden type="checkbox" name="is-privacy-policy-accepted" id="is-privacy-policy-accepted-1" data-checkbox="true" checked>
+
+            <div class="form__actions">
+                <input id="submit-button" class="form__button cta cta--secondary" type="submit" value="Register">
+            </div>
+            <div class="form__actions">
+                <!--<a id="help-link" class="form__button cta cta&#45;&#45;secondary" href="help/index.html">Help &amp; Documentation</a>-->
+                <a id="help-link" class="form__button cta cta--secondary" href="help/index.html">Help &amp; Documentation</a>
+            </div>
+            <div class="form__actions">
+                <button id="download-trex" class="form__button cta cta--secondary">Download Trex file</button>
+            </div>
+
+
+        </div>
+
+        <div id="results" style="display:none">
+            <div class="form__field form-field">
+                <label class="form-field__label" for="deploymentId">DeploymentId</label>
+                <input class="form__control form-field__control large-input" type="text" id="deployment-id-input" name="deploymentId" placeholder="Deployment Id">
+            </div>
+
+            <div class="form__field form-field">
+                <label class="form-field__label" for="adminKey">AdminKey</label>
+                <input class="form__control form-field__control large-input" type="text" id="admin-key-input" name="adminKey" placeholder="Admin Key">
+            </div>
+
+
+            <div class="form-field">
+                <div class="form-field__description form-help">Save these credentials by downloading them as a <code>.txt</code> file.</div>
+                <button id="download-txt" class="form__button cta cta--secondary">Download Credentials (.TXT)</button>
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+</div>
+<script src="tableau-style/vendor/jquery/dist/jquery.min.js"></script>
+<script src="tableau-style/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.5/bluebird.min.js"></script>
+<!-- Library to allow saving of TREX files generated on the fly -->
+<script src="js/FileSaver.min.js"></script>
+<script src="config.js"></script>
+<script src="registration.js"></script>
+</body>
+</html>
